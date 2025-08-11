@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        body {
+            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            position: relative;
+        }
+        
+        /* Background image layer */
+        .background-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Replace this URL with your background image */
+            background-image: url('https://media.discordapp.net/attachments/1173301034584653875/1404199961607802921/image.png?ex=689a529f&is=6899011f&hm=f57caccd3b1d662c3d13ca30ba58d8e39236d5525088bf6da09d26ef22c18409&=&format=webp&quality=lossless');
+        }
+        
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .image-item {
+            position: absolute;
+            overflow: hidden;
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Image positions as percentages of viewport */
+        .img-1 { 
+            left: 0%; 
+            top: 0%; 
+            width: 17.2vw; 
+            height: 40.7vh; 
+        }
+        
+        .img-2 { 
+            left: 0%; 
+            top: 31.5vh; 
+            width: 28.1vw; 
+            height: 68.5vh; 
+        }
+        
+        .img-3 { 
+            left: 16.7vw; 
+            top: 59.5vh; 
+            width: 22.8vw; 
+            height: 40.5vh; 
+        }
+        
+        .img-4 { 
+            left: 33.2vw; 
+            top: 66.9vh; 
+            width: 14vw; 
+            height: 33.1vh; 
+        }
+        
+        .img-5 { 
+            left: 14.1vw; 
+            top: 20.4vh; 
+            width: 22.5vw; 
+            height: 49.9vh; 
+        }
+        
+        .img-6 { 
+            left: 74.4vw; 
+            top: 46.9vh; 
+            width: 25.4vw; 
+            height: 53.1vh; 
+        }
+        
+        .img-7 { 
+            left: 63.2vw; 
+            top: 52.3vh; 
+            width: 18vw; 
+            height: 47.7vh; 
+        }
+        
+        .img-8 { 
+            right: 0%; 
+            top: 2.1vh; 
+            width: 26.4vw; 
+            height: 64.4vh; 
+        }
+        .center-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .center-link img {
+            width: 400px; /* Adjust size as needed */
+            height: auto;
+            display: block;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- Background layer -->
+    <div class="background-layer" id="backgroundLayer"></div>
+    
+    <!-- Main container -->
+    <div class="container">
+        <div class="image-item img-1">
+            <img src="https://framerusercontent.com/images/lTiERfmOGzhU6IYpnR9K7tV4Lhw.gif" alt="Animated image 1">
+        </div>
+        <div class="image-item img-2">
+            <img src="https://framerusercontent.com/images/AxrY52xPxBYnHaFhfgl7Xw6Y3yc.gif" alt="Animated image 2">
+        </div>
+        <a href="https://your-link-here.com" class="center-link">
+            <img src="text.png" alt="Center image">
+        </a>
+        <div class="image-item img-3">
+            <img src="https://framerusercontent.com/images/r6HVIbV6JyXjKV1RhoqCC4A0occ.png" alt="Static image 1">
+        </div>
+        <div class="image-item img-4">
+            <img src="https://framerusercontent.com/images/Yqn9HSb6PhmQYNlHqcgPHjWreZU.png" alt="Static image 2">
+        </div>
+        <!-- <div class="image-item img-5">
+            <img src="https://framerusercontent.com/images/kTzycabox40KCwkru9KaGg7VSs.png" alt="Static image 3">
+        </div> -->
+        <div class="image-item img-6">
+            <img src="https://framerusercontent.com/images/bfc3Qa6UY8TB8M3iLpbkdRBO7k.png" alt="Static image 4">
+        </div>
+        <div class="image-item img-7">
+            <img src="https://framerusercontent.com/images/UlIu3mOnuO4izK8Sw1kdo8wc.gif" alt="Animated image 3">
+        </div>
+        <div class="image-item img-8">
+            <img src="https://framerusercontent.com/images/SFuTAsKSqYuH1LytDQjy3u4v9Y.gif" alt="Animated image 4">
+        </div>
+    </div>
+</body>
+</html>
